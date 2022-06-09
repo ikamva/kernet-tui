@@ -1,0 +1,23 @@
+<div *ngIf="tuiCalendar" class="header">
+  <div class="view">
+    <button (click)="changeView('day')" class="btn">Daily</button>
+    <button (click)="changeView('week')" class="btn">Weekly</button>
+    <button (click)="changeView('month')" class="btn">Month</button>
+  </div>
+  <p>|</p>
+  <div class="">
+    <button class="btn" (click)="getToday()">Today</button>
+  </div>
+  <div class="nav-btn">
+    <button (click)="prev()">
+      <span class="material-icons"> navigate_before </span>
+    </button>
+    <button (click)="next()">
+      <span class="material-icons"> navigate_next </span>
+    </button>
+  </div>
+  <div>
+    <p>{{ getDate() | date: 'dd MMM YYYY' }}</p>
+  </div>
+</div>
+<div #calendar [ngStyle]="{ height: height }"></div>

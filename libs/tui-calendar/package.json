@@ -1,0 +1,29 @@
+{
+  "name": "@kernet/tui-calendar",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "tui-calendar": "^1.15.3",
+    "material-icons": "^1.11.1",
+    "@angular/cdk": "^14.0.1"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "np": "^7.6.1"
+  },
+  "license": "MIT",
+  "author": "Sivuyile Magutywa",
+  "maintainers": [
+    {
+      "name": "Sivuyile Magutywa",
+      "email": "s.magutywa@kernet.co.za"
+    }
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

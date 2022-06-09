@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/tui-calendar/src",
+  "prefix": "kl",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/tui-calendar"],
+      "options": {
+        "project": "libs/tui-calendar/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/tui-calendar/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/tui-calendar/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/tui-calendar"],
+      "options": {
+        "jestConfig": "libs/tui-calendar/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/tui-calendar/**/*.ts",
+          "libs/tui-calendar/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
