@@ -1,6 +1,7 @@
 {
   "name": "@kernet/tui-calendar",
-  "version": "0.0.1",
+  "version": "0.0.5",
+  "homepage": "https://github.com/ikamva/kernet-tui",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
     "@angular/core": "^14.0.0",
@@ -9,10 +10,8 @@
     "@angular/cdk": "^14.0.1"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
-  },
-  "devDependencies": {
-    "np": "^7.6.1"
+    "tslib": "^2.3.0",
+    "tui-calendar": "^1.15.3"
   },
   "license": "MIT",
   "author": "Sivuyile Magutywa",

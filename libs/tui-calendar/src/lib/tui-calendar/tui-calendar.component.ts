@@ -10,7 +10,9 @@ import {
 import Calendar, { IEventObject, IOptions, ISchedule } from 'tui-calendar'
 
 export interface ITuiCalendarOptions extends IOptions {}
-export interface ITuiCalendarSchedule extends ISchedule {}
+export interface ITuiCalendarSchedule extends ISchedule {
+  data?: any
+}
 
 @Component({
   selector: 'kl-tui-calendar',
@@ -19,18 +21,18 @@ export interface ITuiCalendarSchedule extends ISchedule {}
 })
 export class TuiCalendarComponent implements AfterViewInit {
   @Input() height = '800px'
-  @Input() options: IOptions = {
+  @Input() options: ITuiCalendarOptions = {
     defaultView: 'month',
     taskView: false,
     scheduleView: true,
     useDetailPopup: false,
   }
-  @Input() schedules!: ISchedule[]
+  @Input() schedules!: ITuiCalendarSchedule[]
 
   @ViewChild('calendar') calendar!: ElementRef<Element>
   @Output() onScheduleClick: EventEmitter<ISchedule> = new EventEmitter()
 
-  lastClickSchedule!: ISchedule
+  lastClickSchedule!: ITuiCalendarSchedule
   tuiCalendar!: Calendar
 
   constructor() {}
